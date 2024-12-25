@@ -8,11 +8,23 @@ dependencies:
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.6.3)(vue@3.5.13)
+  sortablejs:
+    specifier: ^1.15.0
+    version: 1.15.0
+  uuid:
+    specifier: ^11.0.3
+    version: 11.0.3
   vue:
     specifier: ^3.5.13
     version: 3.5.13(typescript@5.6.3)
+  vue-router:
+    specifier: '4'
+    version: 4.2.5(vue@3.5.13)
 
 devDependencies:
+  '@types/node':
+    specifier: ^22.10.2
+    version: 22.10.2
   '@vitejs/plugin-vue':
     specifier: ^5.2.1
     version: 5.2.1(vite@6.0.5)(vue@3.5.13)
@@ -27,7 +39,7 @@ devDependencies:
     version: 0.65.2(postcss@8.4.49)(vite@6.0.5)(vue@3.5.13)
   vite:
     specifier: ^6.0.5
-    version: 6.0.5
+    version: 6.0.5(@types/node@22.10.2)
   vue-tsc:
     specifier: ^2.2.0
     version: 2.2.0(typescript@5.6.3)
@@ -739,6 +751,12 @@ packages:
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
     dev: true
 
+  /@types/node@22.10.2:
+    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+    dependencies:
+      undici-types: 6.20.0
+    dev: true
+
   /@unocss/astro@0.65.2(vite@6.0.5)(vue@3.5.13):
     resolution: {integrity: sha512-lpGoleJToxaYeN5LTGrNbvbXATNWswgoQwlljIJ9kWOjx4NbGC71pXRvDQSb9yRFDTCr5S2hMtupna4ulrHisA==}
     peerDependencies:
@@ -750,7 +768,7 @@ packages:
       '@unocss/core': 0.65.2
       '@unocss/reset': 0.65.2
       '@unocss/vite': 0.65.2(vite@6.0.5)(vue@3.5.13)
-      vite: 6.0.5
+      vite: 6.0.5(@types/node@22.10.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -940,7 +958,7 @@ packages:
       chokidar: 3.6.0
       magic-string: 0.30.17
       tinyglobby: 0.2.10
-      vite: 6.0.5
+      vite: 6.0.5(@types/node@22.10.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -954,7 +972,7 @@ packages:
       vite: ^5.0.0 || ^6.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 6.0.5
+      vite: 6.0.5(@types/node@22.10.2)
       vue: 3.5.13(typescript@5.6.3)
     dev: true
 
@@ -1566,6 +1584,10 @@ packages:
       totalist: 3.0.1
     dev: true
 
+  /sortablejs@1.15.0:
+    resolution: {integrity: sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==}
+    dev: false
+
   /source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -1624,6 +1646,10 @@ packages:
       - supports-color
     dev: true
 
+  /undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+    dev: true
+
   /unocss@0.65.2(postcss@8.4.49)(vite@6.0.5)(vue@3.5.13):
     resolution: {integrity: sha512-PEN8Yltr/n6xdNcI9iqIK4Dp/fpQ1bPa4aR2TwFg2lV6aRA2PNzarviqL62oOqXYSyQ4sqW3s/oaWD3JGOgJ1A==}
     engines: {node: '>=14'}
@@ -1653,7 +1679,7 @@ packages:
       '@unocss/transformer-directives': 0.65.2
       '@unocss/transformer-variant-group': 0.65.2
       '@unocss/vite': 0.65.2(vite@6.0.5)(vue@3.5.13)
-      vite: 6.0.5
+      vite: 6.0.5(@types/node@22.10.2)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -1661,7 +1687,12 @@ packages:
       - vue
     dev: true
 
-  /vite@6.0.5:
+  /uuid@11.0.3:
+    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
+    hasBin: true
+    dev: false
+
+  /vite@6.0.5(@types/node@22.10.2):
     resolution: {integrity: sha512-akD5IAH/ID5imgue2DYhzsEwCi0/4VKY31uhMLEYJwPP4TiUp8pL5PIK+Wo7H8qT8JY9i+pVfPydcFPYD1EL7g==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -1701,6 +1732,7 @@ packages:
       yaml:
         optional: true
     dependencies:
+      '@types/node': 22.10.2
       esbuild: 0.24.0
       postcss: 8.4.49
       rollup: 4.29.1
@@ -1734,6 +1766,15 @@ packages:
     dependencies:
       vue: 3.5.13(typescript@5.6.3)
     dev: true
+
+  /vue-router@4.2.5(vue@3.5.13):
+    resolution: {integrity: sha512-DIUpKcyg4+PTQKfFPX88UWhlagBEBEfJ5A8XDXRJLUnZOvcpMF8o/dnL90vpVkGaPbjvXazV/rC1qBKrZlFugw==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.6.4
+      vue: 3.5.13(typescript@5.6.3)
+    dev: false
 
   /vue-tsc@2.2.0(typescript@5.6.3):
     resolution: {integrity: sha512-gtmM1sUuJ8aSb0KoAFmK9yMxb8TxjewmxqTJ1aKphD5Cbu0rULFY6+UQT51zW7SpUcenfPUuflKyVwyx9Qdnxg==}

@@ -1,4 +1,4 @@
-import type { Block } from '@/types/block';
+import type { Block, BlockType } from '@/types/block';
 import { defineStore } from 'pinia';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -7,15 +7,24 @@ export const useEditorStore = defineStore('editor', {
         blocks: [] as Block[],
     }),
     actions: {
-        addTextBlock() {
+        addBlock(type: BlockType, content: any) {
             this.blocks.push({
                 id: uuidv4(),
-                type: 'text',
-                content: 'New Text Block',
-            })
+                type,
+                content,
+            });
         },
-        addBlock(block: Block) {
-            this.blocks.push(block);
+        updateBlockContent(id: string, content: any) {
+            const block = this.blocks.find(block => block.id === id);
+            if (block) {
+                block.content = content;
+            }
+        },
+        updateBlockStyle(id: string, style: Record<string, string>) {
+            const block = this.blocks.find(block => block.id === id);
+            if (block) {
+                block.style = style;
+            }
         },
         updateBlock(id: string, updateBlock: Partial<Block>) {
             const blockIndex = this.blocks.findIndex(block => block.id === id);

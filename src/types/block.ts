@@ -1,7 +1,9 @@
 
+export type BlockType = 'text' | 'image' | 'video';
+
 export type Block = {
     id: string;
-    type: 'text' | 'image' | 'video';
+    type: BlockType;
     content: any;
     style?: Record<string, string>;
 }
